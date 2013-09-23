@@ -83,5 +83,19 @@ public class DB {
         return objects;
     }
     
+    public static News getNews(int id){
+        try {
+            ResultSet r = getDBResult("SELECT * FROM News where id="+id);
+                if(r.next()){
+                    News newss=new News(r.getString("headline"),r.getString("text"),r.getString("imagepath"));
+                    return newss;
+                }
+                
+        } catch (Exception ex) {
+            Logger.getLogger(DB.class.getName()).log(Level.SEVERE, null, ex);
+        }
+        return null;
+    }
+    
 
 }

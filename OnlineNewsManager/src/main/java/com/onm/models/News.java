@@ -16,6 +16,12 @@ public class News {
     /**
      * @return the text
      */
+    public News(String headline, String text,String imgPath) {
+        this.headline = headline;
+        this.text = text;
+        this.imgPath=imgPath;
+    }
+    
     public String getText() {
         return text;
     }
