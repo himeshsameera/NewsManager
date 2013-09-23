@@ -14,6 +14,7 @@
         <title>${news.headline}</title>
     </head>
     <body>
+        <h1>${news.headline}</h1>
         <img src=${news.imgPath}></img>
 		<p>${news.text}</p>
     </body>

@@ -51,7 +51,7 @@ public class NewsProvider {
 			HttpServletResponse res, Model model,
 			@PathVariable("id") String nid) throws NumberFormatException, Exception {
 		logger.debug("Getting a news"+nid);
-                
+                System.out.println("aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa***********************");
                 News news = new News("aaa","sss","ddd");
 	//	String news = "bbbbbbbbbbb";///JsonConverter.convertToJson(item1);	
                 
