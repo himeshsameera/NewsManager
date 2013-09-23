@@ -8,14 +8,15 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 <!DOCTYPE html>
 <!DOCTYPE html>
+<%@include file="header.jsp"%>
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>${news.headline}</title>
-    </head>
+
     <body>
+         <div id="mid">
         <h1>${news.headline}</h1>
         <img src=${news.imgPath}></img>
 		<p>${news.text}</p>
+                
+         </div>
     </body>
 </html>
