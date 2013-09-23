@@ -67,19 +67,19 @@ public class DB {
     public static List<Headline> getHeadlines() {
         List<Headline> objects = new ArrayList<Headline>();
         
-//        try {
-//            ResultSet r = getDBResult("SELECT * FROM News");
-//            while(r.next()){
-//                
-//            }
-//        } catch (Exception ex) {
-//            Logger.getLogger(DB.class.getName()).log(Level.SEVERE, null, ex);
-//        }
+        try {
+            ResultSet r = getDBResult("SELECT * FROM News");
+            while(r.next()){
+                objects.add(new Headline(r.getString("headline"), r.getString("text")));
+            }
+        } catch (Exception ex) {
+            Logger.getLogger(DB.class.getName()).log(Level.SEVERE, null, ex);
+        }
         
-        objects.add(new Headline("Test head1", "Test text 1"));
-        objects.add(new Headline("Test head2", "Test text 1"));
-        objects.add(new Headline("Test head3", "Test text 1"));
-        objects.add(new Headline("Test head4", "Test text 1"));
+//        objects.add(new Headline("Test head1", "Test text 1"));
+//        objects.add(new Headline("Test head2", "Test text 1"));
+//        objects.add(new Headline("Test head3", "Test text 1"));
+//        objects.add(new Headline("Test head4", "Test text 1"));
         return objects;
     }
     
