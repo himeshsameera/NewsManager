@@ -52,7 +52,7 @@ public class NewsProvider {
 			@PathVariable("id") String nid) throws NumberFormatException, Exception {
 		logger.debug("Getting a news"+nid);
                 
-                News news = new News("aaa","sss","ddd");
+                News news = DB.getNews(Integer.parseInt(nid));
 	//	String news = "bbbbbbbbbbb";///JsonConverter.convertToJson(item1);	
                 
                 return new ModelAndView("newsviewer", "news", news);

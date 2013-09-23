@@ -4,6 +4,7 @@
  */
 package com.onm.DB;
 
+import com.onm.models.Comment;
 import com.onm.models.Headline;
 import com.onm.models.News;
 import java.sql.Connection;
@@ -26,9 +27,9 @@ public class DB {
 //    private static final String USERNAME="abc";
 //    private static final String PASSWORD="123";
 //    
-       private static final String URL = "jdbc:mysql://sql4.freemysqlhosting.net:3306/sql418954";
-    private static final String USERNAME="sql418954";
-    private static final String PASSWORD="yT2%iF7*"; 
+       private static final String URL = "jdbc:mysql://localhost:3306/newsmanager";
+    private static final String USERNAME="root";
+    private static final String PASSWORD=""; 
     
     /**
      * Creates the connection to the database.
@@ -87,7 +88,7 @@ public class DB {
         try {
             ResultSet r = getDBResult("SELECT * FROM News where id="+id);
                 if(r.next()){
-                    News newss=new News(r.getString("headline"),r.getString("text"),r.getString("imagepath"));
+                    News newss=new News(r.getString("headline"),r.getString("text"),r.getString("imagepath"),new ArrayList<Comment>());
                     return newss;
                 }
                 

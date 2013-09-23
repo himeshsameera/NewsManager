@@ -4,6 +4,8 @@
  */
 package com.onm.models;
 
+import java.util.List;
+
 /**
  *
  * @author Himesh_2
@@ -12,14 +14,16 @@ public class News {
     private String text;
     private String headline;
     private String imgPath;
+    private List<Comment> comments;
 
     /**
      * @return the text
      */
-    public News(String headline, String text,String imgPath) {
+    public News(String headline, String text,String imgPath,List<Comment> comments) {
         this.headline = headline;
         this.text = text;
         this.imgPath=imgPath;
+        this.comments=comments;
     }
     
     public String getText() {
@@ -59,6 +63,20 @@ public class News {
      */
     public void setImgPath(String imgPath) {
         this.imgPath = imgPath;
+    }
+
+    /**
+     * @return the comments
+     */
+    public List<Comment> getComments() {
+        return comments;
+    }
+
+    /**
+     * @param comments the comments to set
+     */
+    public void setComments(List<Comment> comments) {
+        this.comments = comments;
     }
 
     
