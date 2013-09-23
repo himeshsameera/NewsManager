@@ -76,10 +76,6 @@ public class DB {
             Logger.getLogger(DB.class.getName()).log(Level.SEVERE, null, ex);
         }
         
-//        objects.add(new Headline("Test head1", "Test text 1"));
-//        objects.add(new Headline("Test head2", "Test text 1"));
-//        objects.add(new Headline("Test head3", "Test text 1"));
-//        objects.add(new Headline("Test head4", "Test text 1"));
         return objects;
     }
     
