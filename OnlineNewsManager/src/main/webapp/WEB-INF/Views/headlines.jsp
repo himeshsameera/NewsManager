@@ -6,14 +6,13 @@
 <%@ taglib prefix="c" 
            uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
+<%@include file="header.jsp"%>
 <!DOCTYPE html>
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>news list</title>
-    </head>
+    
     <body>
+        <div id="mid">
      <c:if test="${not empty objects}">       
         <c:forEach var="o" items="${objects}">
              <div>
@@ -24,6 +23,6 @@
         </c:forEach>
        
     </c:if>
-
+</div>
     </body>
 </html>
