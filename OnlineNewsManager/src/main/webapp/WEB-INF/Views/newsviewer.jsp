@@ -11,10 +11,10 @@
 <html>
     <head>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
-        <title>news 1</title>
+        <title>${news.headline}</title>
     </head>
     <body>
-        <img src="aa.jpg"></img>
-		<p>.</p>
+        <img src=${news.imgPath}></img>
+		<p>${news.text}</p>
     </body>
 </html>
