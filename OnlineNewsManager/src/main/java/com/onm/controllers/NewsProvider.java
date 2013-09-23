@@ -47,14 +47,15 @@ public class NewsProvider {
         
         
 	@RequestMapping(value = { "News/{id}" })
-	public void getProduct(HttpServletRequest req,
+	public ModelAndView getProduct(HttpServletRequest req,
 			HttpServletResponse res, Model model,
 			@PathVariable("id") String nid) throws NumberFormatException, Exception {
 		logger.debug("Getting a news"+nid);
-		String news = "bbbbbbbbbbb";///JsonConverter.convertToJson(item1);	   
-		res.setContentType("application/json;");
-		PrintWriter writer = res.getWriter();
-		writer.print(news);
+                
+                News news = new News();
+	//	String news = "bbbbbbbbbbb";///JsonConverter.convertToJson(item1);	
+                
+                return new ModelAndView("newsviewer", "news", news);
 	}
 	
         @RequestMapping(value={"headlines"})
