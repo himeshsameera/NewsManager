@@ -6,17 +6,15 @@
 <%@ taglib prefix="c" 
            uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<!DOCTYPE html>
 <%@include file="header.jsp"%>
+<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
-
+    
     <body>
-         <div id="mid">
-        <h1>${news.headline}</h1>
+        <div id="mid">
         <img src=${news.imgPath}></img>
 		<p>${news.text}</p>
-                
-         </div>
+        </div>
     </body>
 </html>

@@ -6,13 +6,13 @@
 <%@ taglib prefix="c" 
            uri="http://java.sun.com/jsp/jstl/core" %>
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
-<!DOCTYPE html>
-<!DOCTYPE html>
 <%@include file="header.jsp"%>
+<!DOCTYPE html>
+<!DOCTYPE html>
 <html>
-
+    
     <body>
-         <div id="mid">
+        <div id="mid">
      <c:if test="${not empty objects}">       
         <c:forEach var="o" items="${objects}">
              <div>
@@ -23,6 +23,6 @@
         </c:forEach>
        
     </c:if>
-         </div>
+</div>
     </body>
 </html>
