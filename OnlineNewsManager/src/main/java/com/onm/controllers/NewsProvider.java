@@ -61,7 +61,7 @@ public class NewsProvider {
         public ModelAndView renderTable() {
             System.out.println("***********************");
               List<Headline> objects = DB.getHeadlines();
-            ModelAndView mv = new ModelAndView("table"); 
+            ModelAndView mv = new ModelAndView("headlines"); 
             mv.addObject("objects",objects);
             return mv;
         }	
