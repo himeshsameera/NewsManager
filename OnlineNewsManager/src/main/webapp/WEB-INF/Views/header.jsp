@@ -62,7 +62,7 @@ border-radius: 20px;
 }
 
 
-#BlahBlah{
+#quote{
 background-color: buttonface;
 border-color: black;
 border-width: 1px;
