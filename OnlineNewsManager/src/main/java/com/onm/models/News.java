@@ -15,17 +15,19 @@ public class News {
     private String headline;
     private String imgPath;
     private List<Comment> comments;
+    private List<Content> contents;
 
-    /**
-     * @return the text
-     */
-    public News(String headline, String text,String imgPath,List<Comment> comments) {
-        this.headline = headline;
+    public News(String text, String headline, String imgPath, List<Comment> comments, List<Content> contents) {
         this.text = text;
-        this.imgPath=imgPath;
-        this.comments=comments;
+        this.headline = headline;
+        this.imgPath = imgPath;
+        this.comments = comments;
+        this.contents = contents;
     }
     
+      /**
+     * @return the text
+     */  
     public String getText() {
         return text;
     }
@@ -77,6 +79,20 @@ public class News {
      */
     public void setComments(List<Comment> comments) {
         this.comments = comments;
+    }
+
+    /**
+     * @return the contents
+     */
+    public List<Content> getContents() {
+        return contents;
+    }
+
+    /**
+     * @param contents the contents to set
+     */
+    public void setContents(List<Content> contents) {
+        this.contents = contents;
     }
 
     

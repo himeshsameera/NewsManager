@@ -10,10 +10,10 @@
 <!DOCTYPE html>
 <!DOCTYPE html>
 <html>
-    
     <body>
-        <div id="mid">
-        <img src=${news.imgPath}></img>
+        <div id="mid">            
+        <h3>${news.headline}</h3>    
+                <img src=${news.imgPath}></img>
 		<p>${news.text}</p>
         </div>
     </body>

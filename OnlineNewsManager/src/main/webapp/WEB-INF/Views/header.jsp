@@ -133,25 +133,21 @@ border-width: 1px;
 <body>
     <div class="header" id="Title">
         <img src="images/ghost.png" class ="logo">
-        <h1>Revision Ghost - The no 1 Questions Database for Engineering Students</h1>
+        <h1>News Splash</h1>
     </div>
-    <div id="BlahBlah">
-        <p>Home &gt; Select Category<br/>
+    <div id="quote">
+        <p>Home &gt; Headlines<br/>
         Quote of the day</p>
     </div>
     <div id ="Right">
-        <p><a href="index.jsp" id="home" title="Go Back to Home Page">Home</a></p>
-        <p><a href="about.jsp" id="about" title="About This Site">About</a></p>
-        <p><a href="select.jsp" id="select" title="Select Question Categories">Select Categories</a></p>
-        <p><a href="select.jsp" id="mcq" title="Go to MCQ Question Sheets">MCQ</a></p>
-        <p><a href="SelectArticle.jsp" id="aticles" title="Go to Articles">Articles / Tutorials</a></p>
-        <p><a href="search.jsp" id="search" title="Search Articles or Questions">Search</a></p>
-        <p>Authors</p>
+        <p><a href="/OnlineNewsManager/news/headlines" id="home" title="Go Back to Home Page">Home</a></p>
+        <p><a href="/OnlineNewsManager/news/headlines" id="headlies" title="View news headlines">Headlines</a></p>
+        <p><a href="/OnlineNewsManager/news/headlines" id="about" title="About This Site">About</a></p>
     </div>
 <%String myname = (String)session.getAttribute("username");
     if(myname==null){%>
     <div id="Left">
-        <form id="form1" name="form1" method="post" action="login">
+        <form id="form1" name="form1" method="post" action="/OnlineNewsManager/user/login">
             User Name <br />
             <input type="text" name="user" id="user" /><br />
             Password <br />
@@ -159,17 +155,14 @@ border-width: 1px;
             <input type="hidden" name="login" value="1" />
             <input name="submit" type="submit" value="Log In" />
         </form>
-                    Don't have an account?<br/><a href="SignUp.jsp">Sign Up</a>
+                    Don't have an account?<br/><a href="/OnlineNewsManager/news/headlines">Sign Up</a>
     </div>
 <%}else{%>
     <div id="Left">
 <%out.println("<p>Logged in as "+myname+" </p>");%>
         <p>My Profile</p>
-        <p><a href="addPaper.jsp" title="Add a Paper">Add Paper</a></p>
-        <p><a href="addArticle.jsp">Add Articles/Tutorials</a></p>
-        <p>My Papers</p>
-        <p>Messages</p>
-        <p><a href="login?login=0">logout</a></p>
+        <p><a href="/OnlineNewsManager/news/headlines" title="Add a News">Add News</a></p>
+        <p><a href="/OnlineNewsManager/user/login?login=0">logout</a></p>
     </div>
 <%}%>
 

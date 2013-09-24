@@ -25,19 +25,12 @@ import org.springframework.web.servlet.ModelAndView;
 @RequestMapping("/news/*")
 public class NewsProvider {
     
-    	@RequestMapping(value = { "News/{id}" })
+    	@RequestMapping(value = { "view/{id}" })
 	public ModelAndView showNews(HttpServletRequest req,
 			HttpServletResponse res, Model model,
 			@PathVariable("id") String nid) throws NumberFormatException, Exception {
-<<<<<<< HEAD
-                News news = new News("aaa","sss","ddd");
-
-=======
-		logger.debug("Getting a news"+nid);
                 
                 News news = DB.getNews(Integer.parseInt(nid));
-	//	String news = "bbbbbbbbbbb";///JsonConverter.convertToJson(item1);	
->>>>>>> 8ba2181582f7ef4ca34ce155c0f63ebf2743e052
                 
                 return new ModelAndView("newsviewer", "news", news);
 	}

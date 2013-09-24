@@ -17,7 +17,7 @@
         <c:forEach var="o" items="${objects}">
              <div>
             <h3>${o.headline}</h3>
-            <p>${o.text}<a href="news1.html">see more..</a></p>
+            <p>${o.text}<a href="view/1">see more..</a></p>
         </div>
 
         </c:forEach>
