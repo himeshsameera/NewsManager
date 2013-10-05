@@ -12,6 +12,7 @@
     <properties>
         <endorsed.dir>${project.build.directory}/endorsed</endorsed.dir>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <netbeans.hint.deploy.server>Tomcat</netbeans.hint.deploy.server>
     </properties>
 
  <dependencies>
@@ -137,8 +138,13 @@
 	<artifactId>mysql-connector-java</artifactId>
 	<version>5.1.26</version>
 </dependency>
-            
-	</dependencies>
+  <dependency>
+   <groupId>junit</groupId>
+   <artifactId>junit</artifactId>
+   <version>3.8.2</version>
+   <scope>test</scope>
+  </dependency>
+ </dependencies>
 
     <build>
         <plugins>
