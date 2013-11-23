@@ -76,7 +76,11 @@ public class DB{
         try {
             ResultSet r = getDBResult("SELECT * FROM News where id="+id);
                 if(r.next()){
-                    News news=new News(r.getString("headline"),r.getString("text"),r.getString("imagepath"),new ArrayList<Comment>(),new ArrayList<Content>());
+                    News news=new News(r.getString("text"),r.getString("headline"),new ArrayList<String>(),new ArrayList<Comment>(),new ArrayList<Content>());
+                    ResultSet r2 = getDBResult("SELECT * FROM images where newsid="+id);
+                    while(r2.next()){
+                        news.getImages().add(r2.getString("path"));
+                    }
                     return news;
                 }
                 
