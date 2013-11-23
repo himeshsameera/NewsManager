@@ -39,7 +39,7 @@ public class NewsProvider {
         @RequestMapping(value={"headlines"})
         public ModelAndView showHeadlines() {
 
-              List<Headline> objects = DB.getHeadlines();
+            List<Headline> objects = DB.getHeadlines();
             ModelAndView mv = new ModelAndView("headlines"); 
             mv.addObject("objects",objects);
             return mv;
