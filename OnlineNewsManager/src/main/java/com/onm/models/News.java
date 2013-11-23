@@ -13,14 +13,14 @@ import java.util.List;
 public class News {
     private String text;
     private String headline;
-    private String imgPath;
+    private List<String> images;
     private List<Comment> comments;
     private List<Content> contents;
 
-    public News(String text, String headline, String imgPath, List<Comment> comments, List<Content> contents) {
+    public News(String text, String headline, List<String> images, List<Comment> comments, List<Content> contents) {
         this.text = text;
         this.headline = headline;
-        this.imgPath = imgPath;
+        this.images = images;
         this.comments = comments;
         this.contents = contents;
     }
@@ -53,19 +53,7 @@ public class News {
         this.headline = headline;
     }
 
-    /**
-     * @return the imgPath
-     */
-    public String getImgPath() {
-        return imgPath;
-    }
 
-    /**
-     * @param imgPath the imgPath to set
-     */
-    public void setImgPath(String imgPath) {
-        this.imgPath = imgPath;
-    }
 
     /**
      * @return the comments
@@ -93,6 +81,20 @@ public class News {
      */
     public void setContents(List<Content> contents) {
         this.contents = contents;
+    }
+
+    /**
+     * @return the images
+     */
+    public List<String> getImages() {
+        return images;
+    }
+
+    /**
+     * @param images the images to set
+     */
+    public void setImages(List<String> images) {
+        this.images = images;
     }
 
     
